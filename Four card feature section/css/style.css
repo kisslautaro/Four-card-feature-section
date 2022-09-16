@@ -1,0 +1,158 @@
+:root{
+    /* Colors */
+
+    --primaryRed:hsl(0, 78%, 62%);
+    --primaryCyan:hsl(180, 62%, 55%);
+    --primaryOrange:hsl(34, 97%, 64%);
+    --primaryBlue:hsl(212, 86%, 64%);
+
+    /* Neutral */
+
+    --neutralVeryDarkBlue:hsl(234, 12%, 34%);
+    --neutralGrayishBlue:hsl(229, 6%, 66%);
+    --neutralVeryLightGray:hsl(0, 0%, 98%);
+
+
+    /* Font */
+
+    --font:'Poppins', sans-serif;
+
+}
+
+html{
+    box-sizing: border-box;
+    font-size:  62.5%;
+    height: 100%;
+    
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+
+}
+
+
+body{
+    height: 100vh;
+    font-family: var(--font);
+    background-color: var(--neutralVeryLightGray);
+   
+}
+
+.container{
+    height: 100vh;
+    padding: 5rem 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text{
+    text-align: center;
+}
+
+.text h2{
+    color: var(--neutralVeryDarkBlue);
+    font-weight: 300;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.text h1{
+    color: var(--neutralVeryDarkBlue);
+    margin: .5rem 0 0 0;
+    font-size: 3rem;
+}
+
+.text p{
+    font-size: 1.5rem;
+    color: var(--neutralGrayishBlue);    
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Contain */
+
+.contain{
+    height: 60rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 2rem;
+    grid-template-areas: 
+    ". contain__center ."
+    "d1 contain__center d4"
+    ". contain__center .";
+}
+
+.card{
+    width: 33rem;
+    height: 23rem;
+    padding: 3rem;
+    border-radius: .5rem;
+    background-color: white;
+    -webkit-box-shadow: 0 1.6rem 1.6rem -1rem rgba(0,0,0,0.29); 
+    box-shadow: 0 1.6rem 1.6rem -1rem rgba(0,0,0,0.29);
+    
+   
+    
+}
+
+.card h1{
+    margin: 0;
+    color: var(--neutralVeryDarkBlue);
+    
+}
+
+.card p{
+    color: var(--neutralGrayishBlue);
+    line-height: 1.5;
+    font-size: 1.3rem;
+    font-family: 300;
+}
+
+
+.card img{
+    position: relative;
+    float: right;
+    width: 6rem;
+    bottom: -14%;
+   
+   
+    
+}
+.contain__center{
+    grid-column: 2/3;
+    grid-area: contain__center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.d1{
+    border-top: .4rem solid var(--primaryCyan);
+    grid-column: 1/2;
+    grid-row: 2/3;
+    grid-area: d1;
+}
+
+.d2{
+    border-top: .4rem solid var(--primaryRed);
+    
+    
+}
+
+.d3{
+    border-top: .4rem solid var(--primaryOrange);
+    
+}
+
+
+.d4{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    border-top: .5rem solid var(--primaryBlue);
+    grid-area: d4;
+}
