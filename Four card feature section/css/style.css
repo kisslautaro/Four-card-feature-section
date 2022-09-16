@@ -40,119 +40,152 @@ body{
 }
 
 .container{
-    height: 100vh;
-    padding: 5rem 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+        height: 100vh;        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 7rem 2rem 2rem 2rem;
+        
 }
 
 .text{
     text-align: center;
+    line-height: 1;
 }
-
-.text h2{
+.text h1,h2{
     color: var(--neutralVeryDarkBlue);
+    font-size:2rem;
+}
+.text h2{    
     font-weight: 300;
-    font-size: 3rem;
     margin: 0;
 }
-
 .text h1{
-    color: var(--neutralVeryDarkBlue);
+        
     margin: .5rem 0 0 0;
-    font-size: 3rem;
+    
 }
-
 .text p{
-    font-size: 1.5rem;
-    color: var(--neutralGrayishBlue);    
-    font-weight: 400;
-    line-height: 1.5;
+    margin: 2rem auto;
+    width: 70%;
 }
-
-/* Contain */
-
 .contain{
-    height: 60rem;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
-    gap: 2rem;
-    grid-template-areas: 
-    ". contain__center ."
-    "d1 contain__center d4"
-    ". contain__center .";
-}
 
-.card{
-    width: 33rem;
-    height: 23rem;
-    padding: 3rem;
-    border-radius: .5rem;
-    background-color: white;
-    -webkit-box-shadow: 0 1.6rem 1.6rem -1rem rgba(0,0,0,0.29); 
-    box-shadow: 0 1.6rem 1.6rem -1rem rgba(0,0,0,0.29);
+}
+@media (min-width: 768px) {
+    .container{
+        
+        padding: 8rem 10rem 2rem 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     
-   
+    }
     
-}
-
-.card h1{
-    margin: 0;
-    color: var(--neutralVeryDarkBlue);
+    .text{
+        text-align: center;
+        line-height: 1.3;
+    }
+    .text h1,h2{
+        color: var(--neutralVeryDarkBlue);
+        font-size:3.6rem;
+    }
     
-}
-
-.card p{
-    color: var(--neutralGrayishBlue);
-    line-height: 1.5;
-    font-size: 1.3rem;
-    font-family: 300;
-}
-
-
-.card img{
-    position: relative;
-    float: right;
-    width: 6rem;
-    bottom: -14%;
-   
-   
+  
     
-}
-.contain__center{
-    grid-column: 2/3;
-    grid-area: contain__center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-}
-.d1{
-    border-top: .4rem solid var(--primaryCyan);
-    grid-column: 1/2;
-    grid-row: 2/3;
-    grid-area: d1;
-}
-
-.d2{
-    border-top: .4rem solid var(--primaryRed);
+    .text p{
+        margin: 2rem 0 0 0;
+        font-size: 1.5rem;
+        color: var(--neutralGrayishBlue);    
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    
+    /* Contain */
+    
+    .contain{
+        margin: 4rem 0 0 0;
+        height: 60rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 3rem;
+        grid-template-areas: 
+        ". contain__center ."
+        "d1 contain__center d4"
+        ". contain__center .";
+    }
+    
+    .card{
+        width: 35rem;
+        height: 25rem;
+        padding: 3rem;
+        border-radius: .5rem;
+        background-color: white;
+        -webkit-box-shadow: 0px 13px 16px -3px rgba(37,70,107,0.19); 
+        box-shadow: 0px 13px 16px -3px rgba(37,70,107,0.19);
+       
+        
+    }
+    
+    .card h1{
+        margin: 0;
+        color: var(--neutralVeryDarkBlue);
+        
+    }
+    
+    .card p{
+        color: var(--neutralGrayishBlue);
+        line-height: 1.8;
+        font-size: 1.3rem;
+        font-family: 300;
+    }
     
     
-}
-
-.d3{
-    border-top: .4rem solid var(--primaryOrange);
+    .card img{
+        position: relative;
+        float: right;
+        width: 6.3rem;
+        bottom: -15%;
+        right: 1.1%;
+       
+       
+        
+    }
+    .contain__center{
+        grid-column: 2/3;
+        grid-area: contain__center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .d1{
+        border-top: .4rem solid var(--primaryCyan);
+        grid-column: 1/2;
+        grid-row: 2/3;
+        grid-area: d1;
+    }
     
-}
+    .d2{
+        border-top: .4rem solid var(--primaryRed);
+        
+        
+    }
+    
+    .d3{
+        border-top: .4rem solid var(--primaryOrange);
+        
+    }
+    
+    
+    .d4{
+        grid-column: 3/4;
+        grid-row: 2/3;
+        border-top: .5rem solid var(--primaryBlue);
+        grid-area: d4;
+    }
 
-
-.d4{
-    grid-column: 3/4;
-    grid-row: 2/3;
-    border-top: .5rem solid var(--primaryBlue);
-    grid-area: d4;
 }
